@@ -27,15 +27,11 @@ $(document).ready(function(){
   });
   
       $('#tags').on('keydown', function(e){
-    if(e.keyCode === 8){
-    //if(e.keyCode == 8){alert('Delete Key Pressed');
-    if(confirm("Really delete this tag?")) {
-     elements = document.getElementsByClassName("tag");
-     var dlzka=  (elements.length-1);
-  
-        elements[0].parentNode.removeChild(elements[dlzka]);
-    
-   //$('tag[1]').remove();  
+    if(e.keyCode === 8 && document.getElementById("bu").value===""){
+       if(confirm("Really delete this tag?")) {
+         elements = document.getElementsByClassName("tag");
+         var dlzka=  (elements.length-1);
+         elements[0].parentNode.removeChild(elements[dlzka]);
     } }
     
   });
