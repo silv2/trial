@@ -27,7 +27,7 @@ $(document).ready(function(){
   });
   
       $('#tags').on('keydown', function(e){
-    if(e.keyCode === 8 && document.getElementById("bu").value===""){
+    if(e.keyCode === 8 && document.getElementById("autocomplete").value===""){
        if(confirm("Really delete this tag?")) {
          elements = document.getElementsByClassName("tag");
          var dlzka=  (elements.length-1);
